@@ -17,4 +17,4 @@ ARG JAR_FILE
 ADD target/${JAR_FILE} target/app.jar
 
 # Run the jar file
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","target/app.jar"]
+ENTRYPOINT ["/usr/bin/java","-Djava.security.egd=file:/dev/./urandom","-jar","target/app.jar"]
